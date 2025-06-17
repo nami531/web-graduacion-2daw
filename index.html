@@ -1,88 +1,27 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" href="./birrete.png" type="image/png">
   <title>Invitación Cena 2º DAW</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Roboto', sans-serif;
-      background-color: #f4f4f4;
-      color: #333;
-    }
-    header {
-      background: #1e1e2f;
-      color: #fff;
-      padding: 2rem 1rem;
-      text-align: center;
-    }
-    .container {
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 1rem;
-      background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    header h1 h2 {
-      color: white;
-    }
-    .info-section {
-      margin-bottom: 2rem;
-    }
-    .map {
-      width: 100%;
-      height: 300px;
-      border-radius: 10px;
-      margin-top: 1rem;
-    }
-    .chatbot {
-      background: #efefef;
-      border-radius: 10px;
-      padding: 1rem;
-      margin-top: 2rem;
-    }
-    .chatbot input {
-      width: 75%;
-      padding: 0.75rem;
-      margin-top: 0.5rem;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-      font-size: 1rem;
-    }
-    .chatbot button {
-      padding: 0.75rem 1.5rem;
-      margin-top: 1rem;
-      background-color: #1e1e2f;
-      color: #fff;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    .response {
-      margin-top: 1rem;
-      font-weight: bold;
-      color: #0077cc;
-    }
-    @media (max-width: 600px) {
-      .container {
-        padding: 1rem;
-      }
-    }
-  </style>
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
 </head>
+
 <body>
   <header>
     <h1>🎓 Cena de Postgraduación 2º DAW 🎉</h1>
     <p>¡Versión estable y sin bugs!</p>
   </header>
   <div class="container">
-     <section class="info-section">
+    <section class="info-section">
       <h2>🚀 Mensaje Especial</h2>
-      <p>Después de compilar nuestro último curso, sobrevivir a excepciones no controladas, y debuggear la vida con 4 horas de sueño, ¡es hora de celebrar el release oficial de nuestra versión 2.0 como desarrolladores!</p>
+      <p>Después de compilar nuestro último curso, sobrevivir a excepciones no controladas, y debuggear la vida con 4
+        horas de sueño, ¡es hora de celebrar el release oficial de nuestra versión 2.0 como desarrolladores!</p>
     </section>
     <section class="info-section">
       <h2>📅 Detalles del Evento</h2>
@@ -90,7 +29,10 @@
       <p><strong>Hora:</strong> 22:00 - 22:30 </p>
       <p><strong>Lugar:</strong> Umi sushi A Laxe</p>
       <div class="map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2953.7757258389206!2d-8.729387823483655!3d42.240604142639704!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd2f63f6591ac4a1%3A0xd325ec4ebc5c5487!2sUmi%20Sushi%20A%20Laxe%20vigo!5e0!3m2!1ses!2ses!4v1749804889356!5m2!1ses!2ses" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2953.7757258389206!2d-8.729387823483655!3d42.240604142639704!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd2f63f6591ac4a1%3A0xd325ec4ebc5c5487!2sUmi%20Sushi%20A%20Laxe%20vigo!5e0!3m2!1ses!2ses!4v1749804889356!5m2!1ses!2ses"
+          width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </section>
     <section class="info-section">
@@ -110,146 +52,7 @@
     </section>
   </div>
 
-  <script>
-    function mostrarMensaje() {
-      const nombre = document.getElementById("profesorInput").value.trim().toLowerCase();
-      const mensajeBox = document.getElementById("mensajePersonalizado");
 
-      let mensaje = `Hola, ${nombre}. Tus alumnos de 2º DAW quieren darte las gracias por acompañarlos en esta aventura tan intensa como inolvidable. 🙌\n\n¡Regístrate para continuar y vivir esta noche épica con nosotros! 🚀`
-
-      if (nombre.length === 0) {
-        mensajeBox.innerText = "Por favor, introduce tu nombre.";
-        return;
-      } else if (nombre === 'marta'){
-        mensaje = `Marta, nuestra profe/tutora/bibliotecaria no oficial favorita (pero que no se entere nadie):
-
-                Gracias por ser esa persona que siempre está a mil por hora, con mil cosas entre manos, y aun así encuentra tiempo para ayudarnos con nuestros bucles infinitos… y con los de código también.
-                Has sido nuestra guía en el mundo de Python, Java, GitHub, Docker, Apache y hasta en los oscuros túneles de la ciberseguridad (aunque compartamos nuestras claves privadas).
-
-                Nos encanta cómo te preparas para responder hasta las preguntas más rebuscadas que ni Google sabría responder.
-                Y aunque oficialmente no lo podamos decir en voz alta... eres nuestra favorita.
-                (Pero shhh... que luego los demás se ponen celosos).
-
-                Gracias por enseñarnos tanto y por ser tan cercana, incluso cuando te escondes en la biblioteca como si fuera tu segunda casa.
-                Eres una gran referente no solo como programadora/teleca si no también como persona para nosotros
-
-                Con mucho cariño,
-                Los alumnos y alumnas de DAW 💻❤️`
-      } else if (nombre === 'patricia'){
-        mensaje = `Patricia, la profe que empezó como un reto y acabó siendo una inspiración:
-
-                Al principio no fue fácil. Tú esperabas a tus alumnos de siempre, los del PHP de toda la vida... y aparecimos nosotros: con nuestras preguntas raras, nuestras prisas y esa energía caótica tan de DAW.
-                Pero tú diste un giro brutal, rompiste con tu temario de años y apostaste por algo nuevo para que nosotros aprendiéramos lo mejor. Y eso, sinceramente, lo valoramos muchísimo.
-
-                Nos enseñaste Spring Boot, sí, pero también nos enseñaste algo más importante: a tomarnos en serio este oficio, a ser personas metódicas, comprometidas y, sobre todo, buenas personas.
-                Y mientras lo hacías, ibas impecable, con tus tacones, tu elegancia y tu insistencia inquebrantable con el inglés. (Vale, vale… algún día te haremos caso con eso).
-
-                Aunque empezamos algo fríos, fuiste ganándote nuestro cariño poco a poco. Y ahora que miramos atrás, sabemos que tu esfuerzo, tu exigencia y tu manera de estar siempre un paso por delante nos han dejado huella para bien.
-
-                Gracias por todo, de corazón.
-
-                Con mucho cariño,
-                Los alumnos y alumnas de DAW 💻❤️`
-      } else if (nombre === 'maria' || nombre === 'maría'){
-        mensaje = `Para María, nuestra profe de JavaScript con más energía que un bucle infinito:
-
-                María, aunque solo estuvieras con nosotros un año, dejaste una huella gigante. Siempre tan maja y con ganas de contarnos mil cosas.
-
-                Nos encanta que siempre llegaras con el material preparado a tiempo, lista para enfrentarte a nuestras dudas y a ese código rebelde que a veces no quería funcionar.
-
-                Eres un sol, una profe riquiña que se ganó nuestro cariño sin esfuerzo, y para nosotros eso solo te hace aún más auténtica y cercana.
-
-                Gracias por ser tan buena profesora y por hacernos reír un montón mientras aprendíamos JavaScript y un poco más que solo líneas de código.
-
-                Con mucho cariño,
-                Los alumnos y alumnas de DAW 💻❤️` 
-      } else if (nombre === 'adelina') {
-        mensaje = `Adelina, nuestra profe de empresa y fan número uno del color verde (aparentemente):
-
-            Adelina, sabemos que muchos no te conocen porque entraron por convalidación, pero para nosotros has sido un pilar imprescindible. Siempre maja, con tu insistencia legendaria en que el verde es el color de la esperanza (y de las buenas notas, claro).
-
-            Entendemos que las clases de básica no eran lo tuyo, con sus mil y un problemas… pero nuestra clase, con nuestras preguntas raras y ganas de aprender, seguro que te hizo disfrutar (aunque a veces te volviéramos loca).
-
-            Gracias por tu paciencia, por el esfuerzo y por enseñarnos a ver el lado empresarial… y verde de la vida.
-            
-            Con mucho cariño,
-            Los alumnos y alumnas de DAW 💻❤️` 
-      } else if (nombre === 'juan carlos' ||  nombre === 'juan' ||  nombre === 'carlos'){
-        mensaje = `Juan Carlos, nuestro profe buenazo y compañero inseparable de Patri:
-
-                Juan Carlos, aunque a veces seas un poco despistado (como cuando perdiste ese examen —que decías que nunca te había pasado— o el famoso lío con el móvil), siempre estás ahí para enseñarnos con paciencia y buen humor.
-                Nos mostraste Vue y nociones de diseño de una forma sencilla y cercana, y eso nos ayudó muchísimo.
-
-                Sabemos que esos cafés con Patri son sagrados y te recargan las pilas para aguantar nuestras preguntas y proyectos.
-                Gracias por ser un profe tan cercano y por estar siempre dispuesto a echarnos una mano, incluso cuando las cosas se complican.
-
-                Te queremos mucho y apreciamos todo lo que nos has enseñado.
-
-                Con mucho cariño,
-                Los alumnos y alumnas de DAW 💻❤️ ` 
-      } else if (nombre === 'cristina'){
-        mensaje = ` Cristina, nuestra profe de sistemas, tutora y defensora oficial de Linux:
-
-                    Cristina, aunque solo nos diste clase en primero, y fuiste nuestra tutora, dejaste una huella genial. Siempre tan nerviosa pero con ese corazón enorme que se nota en cada explicación y en cada consejo.
-
-                    Gracias por ser nuestra abogada oficial de Linux, por insistir en que ese pingüino es el rey de los sistemas y por animarnos a probar cosas nuevas aunque a veces nos diera un poco de respeto.
-
-                    Nos caes súper bien a todos, y eso dice mucho porque sabemos que con nosotros no es nada fácil.
-
-                    Gracias por tu paciencia, tu dedicación y tu buen humor.
-
-                    Con cariño,
-                    Los alumnos y alumnas de DAW 🐧💻❤️
-
-`
-      } else if (nombre === 'alejandro'){
-        mensaje = `Alejandro, nuestro profe de FOL creativo y paciente con informáticos silenciosos:
-
-            Alejandro, aunque siempre te quejaras de que los informáticos éramos más callados que los de Estética, sabemos que en el fondo te caíamos bien (o al menos eso nos gusta pensar).
-
-            Gracias por ser un profe tan majo, por tus ganas de hacer las clases creativas y por intentar sacarnos un poco de nuestra zona de silencio habitual.
-
-            Nos enseñaste mucho más que FOL, nos enseñaste a pensar diferente y a tener siempre una idea original en mente.
-
-            ¡Gracias por aguantar nuestra timidez y por ser un profe tan cercano!
-            
-            Con mucho cariño,
-            Los alumnos y alumnas de DAW 💻❤️
-        ` 
-      } else if (nombre === 'jeny'){
-        mensaje = `Jeny, nuestra profe de lenguajes de marcas que, gracias a ella, estás viendo esta página:
-
-                    Jeny, si estás leyendo esto, es porque gracias a ti entendemos el mundo de los lenguajes de marcas y cómo dar vida a las páginas web. Eres una profesora súper comprometida con nuestra educación, siempre pendiente de que aprendiéramos bien y con dedicación para que nada se nos escape.
-
-                    Nos apoyaste en todo momento y gracias a ti hoy podemos crear, entender y disfrutar lo que estamos viendo en esta página.
-
-                    Gracias por enseñarnos no solo a escribir código, sino a construir algo con sentido.
-
-                    Con cariño,
-                    Los alumnos y alumnas de DAW 💻❤️`
-      } else if (nombre === 'noemi' || nombre === 'noemí'){
-        mensaje = `Noemí, la profe que parecía una más del grupo (pero con súper poderes en bases de datos):
-
-                    Noemí, eras como una compañera más, pero con la magia de saber manejar bases de datos y explicarnos el lenguaje C con trucos como el famoso “cuca”  (que todavía no sabemos si era fórmula o hechizo, pero funcionaba).
-
-                    Gracias por echarnos una mano siempre que nos atascábamos y por aguantar nuestras risas y bromas sin perder la paciencia (que no es nada fácil). Nos lo pasamos tan bien contigo que a veces parecía que estábamos más en plan colegas que en clase.
-
-                    Te queremos por eso, por ser tan cercana y por hacer que aprender fuera de verdad divertido.
-
-                    Con cariño,
-                    Los alumnos y alumnas de DAW 💻❤️`
-      } else if (nombre === 'naiara'){
-        mensaje = `
-            Mmmmmm… veo que has llegado hasta aquí 😑, Naira
-            Parece que tendremos que invitarte también, aunque solo sea por quedar bien
-            Nuestra pequeña infiltrada de DAW… quién iba a decir que acabarías siendo el easter egg más inesperado e innovador (badam ps) de esta web.
-
-            P.D.: A ti también te quedan bien las gafas de hecho, me atrevería a decir que incluso mejor que a mí. Pero solo por poco, no te flipes
-        ` 
-      }
-
-      mensajeBox.innerText = mensaje;
-    }
-  </script>
 </body>
+
 </html>
