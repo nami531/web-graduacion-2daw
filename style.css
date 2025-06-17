@@ -1,0 +1,65 @@
+body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    header {
+      background: #1e1e2f;
+      color: #fff;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    header h1 h2 {
+      color: white;
+    }
+    .info-section {
+      margin-bottom: 2rem;
+    }
+    .map {
+      width: 100%;
+      height: 300px;
+      border-radius: 10px;
+      margin-top: 1rem;
+    }
+    .chatbot {
+      background: #efefef;
+      border-radius: 10px;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+    .chatbot input {
+      width: 75%;
+      padding: 0.75rem;
+      margin-top: 0.5rem;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+    .chatbot button {
+      padding: 0.75rem 1.5rem;
+      margin-top: 1rem;
+      background-color: #1e1e2f;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .response {
+      margin-top: 1rem;
+      font-weight: bold;
+      color: #0077cc;
+    }
+    @media (max-width: 600px) {
+      .container {
+        padding: 1rem;
+      }
+    }
